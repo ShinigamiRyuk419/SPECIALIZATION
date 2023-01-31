@@ -1,0 +1,25 @@
+<header>
+    <div class="navbar navbar-dark shadow-sm">
+        <div class="navbbar-brand align-itme-center d-flex">
+            <div class="logo">
+                <img routerLink="/products" src="assets/images/logo.png" alt="FarmToYours" >
+            </div>
+        <!-- <i routerLink="/" class="fas fa-shipping-fast" style="font-size: 22px;color: green;margin-left: 62px;margin-top: 8px;"> </i> -->
+        <!-- <strong>Ambot</strong> -->
+        <ul>
+            <li><a routerLink="/about"><strong >About</strong> </a></li>
+            <li><a routerLink="/all"><strong >All products</strong> </a></li>
+            <li ><a routerLink="/addproduct"><strong >Add product</strong> </a></li>
+            <li><a routerLink="/requests"><strong >Requests</strong> </a></li>
+        </ul>
+        </div>
+
+        <button class="btn" style="background-color: none;" routerLink="/cart">
+            <!-- <i style="font-size: 30px;" class="fas fa-cart-plus" routerLink="/cart"> </i> -->
+            <img src="assets/images/bas1.png" alt="basket">
+            <div style="font-size: 10px;" class="badge bg-dark" style="color: wheat;">{{totalitem}}</div>
+        </button>
+        <button class="bt1" routerLink="/logreg" >Sign in/Sign up</button>
+    </div>
+</header>
+

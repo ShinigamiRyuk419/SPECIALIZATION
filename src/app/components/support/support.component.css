@@ -1,0 +1,158 @@
+.con-content{
+    height:auto;
+    /* width: 100%; */
+    align-items: center;
+    margin-top: -350px;
+    /* background-color: red; */
+  }
+  .contact{
+    margin-top: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    position: relative;
+    margin-bottom: 0%;
+    /* background-color: rebeccapurple; */
+    margin-left: 0%;
+    height: auto;
+  }
+  .mainCon{
+    position: relative;
+    width: 92%;
+    height: 700px;
+    border-radius: 20px;
+    background-color: rgb(16, 36, 16);
+    box-shadow: 0 10px 15px green;
+  }
+  
+  hr{
+      width: 80%;
+  }
+  
+  .leftCon{
+    position: relative;
+    height: 500px;
+    width: 50%;
+    /* background-color: skyblue; */
+    align-items: center;
+  }
+  .rightCon{
+    position: relative;
+    height: 600px;
+    width: 50%;
+    /* background-color: lightcoral; */
+    float: right;
+    top: -500px;
+    align-items: center;
+  
+  }
+  .leftCon h2{
+    position: relative;
+    text-align: center;
+    top: 20px;
+    color: white;
+  }
+  .rightCon h2{
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  .ins{
+    box-sizing: border-box;
+  /* position: absolute; */
+    width: 220px;
+    height: 40px;
+    left: 179px;
+    top: 911px;
+    background: rgba(66, 226, 40, 0.03);
+    border: 1px solid #42E228;
+    border-radius: 12px;
+  }
+  .ins1{
+    box-sizing: border-box;
+  width: 517px;
+  height: 264px;
+  left: 179px;
+  top: 1122px;
+  background: rgba(66, 226, 40, 0.03);
+  border: 1px solid #42E228;
+  border-radius: 12px;
+  }
+  
+  .b{
+    margin-top: -40px;
+    margin-left: 250px;
+  }
+  .sub{
+    background-color: green;border-radius: 10px;
+    height: 40px;
+    width: 90px;
+    color: white;
+  }
+  .b button:hover{
+    background-color: yellowgreen;
+    color: black;
+  }
+  
+  .texts{
+    margin-left: 30px;
+    
+  }
+  .texts i {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+  .texts i:hover{
+    color: green;
+  }
+  
+  .texts p {
+    display: inline-block;
+    color: wheat;
+    vertical-align: middle;
+    margin: 0;
+  }
+  .divcons{
+    align-items: center;
+    position: relative;
+    margin-left: 200px;
+  }
+  .divcons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+  
+  .divcons a:hover {
+    background-color: green;
+  }
+  
+  .map{
+    align-items: center;
+    top: 50px;
+    margin-left: 80px;
+    padding-top: 10px;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+  }
+  

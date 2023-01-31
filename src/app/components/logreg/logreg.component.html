@@ -1,0 +1,116 @@
+<body>
+    <div class="cont">
+        <div class="form sign-in">
+            <div>
+                <h2>Sign In</h2>
+            </div>
+            <!-- Errors -->
+            <div *ngIf="errors?.email" class="alert alert-danger mt-3">
+                {{ errors?.email }}
+            </div>
+            <div *ngIf="errors?.password" class="alert alert-danger mt-3">
+                {{ errors?.password }}
+            </div>
+            <div *ngIf="errors?.error" class="alert alert-danger mt-3">
+                {{ errors?.error }}
+            </div>
+            <!-- end -->
+            <div>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <label>
+                        <span for="email" class="label">Email Address</span>
+                        <input type="email" class="label-control" id="email" name="email" formControlName="email"
+                            required>
+                    </label>
+                    <label>
+                        <span for="password" class="label">Password</span>
+                        <input type="password" class="label-control" id="password" name="password"
+                        formControlName="password">
+                    </label>
+                    <button type="submit" class="button" >Sign In</button>
+                    <p class="forgot-pass">Forgot Password ?</p>
+                </form>
+            </div>
+
+
+            <div class="social-media">
+                <ul>
+                    <a href="https://www.facebook.com/">
+                        <li><img src="assets/images/fb.png"></li>
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <li><img src="assets/images/Insta.png"></li>
+                    </a>
+                    <a href="https://twitter.com/">
+                        <li><img src="assets/images/twit.png"></li>
+                    </a>
+                    <a href="https://www.linkedin.com/login">
+                        <li><img src="assets/images/linkin.png"></li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img-text m-up">
+                    <h2>New here?</h2>
+                    <p>Sign up and discover great amount of new opportunities!</p>
+                </div>
+                <div class="img-text m-in">
+                    <h2>One of us?</h2>
+                    <p>If you already has an account, just sign in. We've missed you!</p>
+                </div>
+                <div class="img-btn">
+                    <span class="m-up">Sign Up</span>
+                    <span class="m-in">Sign In</span>
+                </div>
+            </div>
+
+            <div class="form sign-up">
+                <h2>Sign Up</h2>
+                <!-- Errors -->
+                <div *ngIf="errors?.name" class="alert alert-danger mt-3">
+                    {{ errors?.name }}
+                </div>
+                <div *ngIf="errors?.email" class="alert alert-danger mt-3">
+                    {{ errors?.email }}
+                </div>
+                <div *ngIf="errors?.password" class="alert alert-danger mt-3">
+                    {{ errors?.password }}
+                </div>
+                <div *ngIf="errors?.password_confirmation" class="alert alert-danger mt-3">
+                    {{ errors?.password_confirmation }}
+                </div>
+                <!-- ennd of errors -->
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmitr()">
+                    <label>
+                        <span for="name" class="label">Name</span>
+                        <input type="text" class="label-control" id="name" name="name" formControlName="name" required>
+                    </label>
+                    <label>
+                        <span for="email" class="label">Email</span>
+                        <input type="email" class="label-control" id="email" name="email" formControlName="email"
+                            required>
+                    </label>
+                    <label>
+                        <span for="password" class="label">Password</span>
+                        <input type="password" class="label-control" id="password" name="password"
+                            formControlName="password" required>
+                    </label>
+                    <label>
+                        <span for="cpassword" class="label">Confirm Password</span>
+                        <input type="password" class="label-control" id="password" name="password_confirmation"
+                            formControlName="password_confirmation" required>
+                    </label>
+                    <!-- <label>
+                        <span for="role" class="label">Role</span>
+                        <input type="role" class="label-control" id="role" name="role" [(ngModel)]="form2.role"
+                            required>
+                    </label> -->
+                    <button type="submit" class="button">Sign Up Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
