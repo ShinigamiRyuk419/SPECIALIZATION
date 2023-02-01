@@ -1,1 +1,98 @@
-<p>postproduct works!</p>
+<link rel="stylesheet"
+  href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+<body>
+  <input type="checkbox" id="nav-toggle">
+  <div class="sidebar">
+    <div class="sidebar-dash">
+      <h2><span class="las la-user-cog"></span> <span>Admin</span></h2>
+    </div>
+
+    <div class="sidebar-menu">
+      <ul>
+        <li>
+          <a routerLink="/admindashboard">
+            <span class="las la-igloo"></span>
+            <span>Dashboard</span></a>
+        </li>
+        <li>
+          <a routerLink="/suppliersrequest">
+            <span class="las la-user-circle"></span>
+            <span>Supplier Request</span></a>
+        </li>
+        <li>
+          <a routerLink="/orders">
+            <span class="las la-shopping-bag"></span>
+            <span>Orders</span></a>
+        </li>
+        <li>
+          <a routerLink="/postsupplies" class="active">
+            <span class="las la-users"></span>
+            <span>Post New Product</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <header>
+      <h2>
+        <label for="nav-toggle">
+          <input type="checkbox" id="nav-toggle">
+          <span class="las la-bars"></span>
+
+        </label>
+        Post New Product
+      </h2>
+
+      <div class="search-wrapper">
+        <span class="las la-search"></span>
+        <input type="text" placeholder="Search here" />
+      </div>
+
+      <!-- <div class="user-wrapper">
+        <img src="assets/images/profile.jpg" width="45px" height="45px" alt="">
+        <div>
+          <h4>Jo-ann Bernadez</h4>
+          <small>Administrator</small>
+        </div>
+      </div> -->
+    </header>
+
+    <main>
+
+
+      <div class="recent-grid">
+        <div class="projects">
+          <div class="card">
+            <div class="card-header">
+              <div class="picture">
+                <img src="assets/images/image1.jpg" alt="" width="250" height="250"
+                  style="margin-top: 30px;margin-left: 7rem;">
+                <br>
+                <form>
+                  <input class="upload" name="profile_image" type="file" required style="margin-left: 9rem;">
+                </form>
+              </div>
+
+              <div class="list">
+                <p for="fname"><b>Products</b></p><br>
+                <input class="textfield" type="text" id="fname" name="fname" value=""><br><br>
+                <p for="lname"><b>Delivery Address</b></p><br>
+                <input class="textfield" type="text" id="address" name="address" value=""><br><br>
+                <p for="lname"><b>Available Date</b></p><br>
+                <input class="textfield" type="text" id="lname" name="lname" value=""><br><br>
+                <p for="price"><b>Price </b></p><br>
+                <input class="textfield" type="text" id="price" name="price" value=""><br><br>
+                <p for="quantity"><b>Quantity</b></p><br>
+                <input class="textfield" type="text" id="quantity" name="quantity" value=""><br><br>
+                <input class="post" type="submit" value="Post">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>

@@ -1,1 +1,120 @@
-<p>supplierrequest works!</p>
+<link rel="stylesheet"
+  href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+<body >
+  <input type="checkbox" id="nav-toggle">
+  <div class="sidebar">
+    <div class="sidebar-dash">
+      <h2><span class="las la-user-cog"></span> <span>Admin</span></h2>
+    </div>
+
+    <div class="sidebar-menu">
+      <ul>
+        <li>
+          <a routerLink="/admindashboard">
+            <span class="las la-igloo"></span>
+            <span>Dashboard</span></a>
+        </li>
+        <li>
+          <a routerLink="/suppliersrequest" class="active">
+            <span class="las la-user-circle"></span>
+            <span>Supplier Request</span></a>
+        </li>
+        <li>
+          <a routerLink="/orders">
+            <span class="las la-shopping-bag"></span>
+            <span>Orders</span></a>
+        </li>
+        <li>
+          <a routerLink="/postsupplies">
+            <span class="las la-users"></span>
+            <span>Post New Product</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <header>
+      <h2>
+        <label for="nav-toggle">
+          <input type="checkbox" id="nav-toggle">
+          <span class="las la-bars"></span>
+
+        </label>
+        Suppliers Request
+      </h2>
+
+      <div class="search-wrapper">
+        <span class="las la-search"></span>
+        <input type="text" placeholder="Search here" />
+      </div>
+
+      <!-- <div class="user-wrapper">
+        <img src="assets/images/profile.jpg" width="45px" height="45px" alt="">
+        <div>
+          <h4>Jo-ann Bernadez</h4>
+          <small>Administrator</small>
+        </div>
+      </div> -->
+    </header>
+
+    <main >
+      <div class="recent-grid">
+        <div class="projects">
+          <div class="card">
+            <div class="card-header">
+              <h3>Suppliers Request</h3>
+
+              <button>See all <span class="las la-arrow-right"></span></button>
+            </div>
+
+            <div class="card-body">
+              <table width="100%">
+                <thead>
+                  <tr class="inform">
+                    <td>Products</td>
+                    <td>Date Available</td>
+                    <td>Quantity</td>
+                    <td>Price</td>
+                    <td>Status</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="information" *ngFor="let reqItem of ProductArray" (click)="setUpdate(reqItem)">
+                    <td>{{reqItem.productname}}</td>
+                    <td>{{reqItem.availability}}</td>
+                    <td><b>{{reqItem.quantity}}</b> klg</td>
+                    <td><b>{{reqItem.price}}</b> /klg</td>
+                    <td>{{reqItem.status}}</td>
+                    <td><button class="first" (click)="setUpdate(reqItem)" >Confirm</button> <button class="second">Decline</button></td>
+                  </tr>
+
+                </tbody>
+
+              </table>
+              <div class="card-body">
+                <div class="table-responsive"></div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
+
+    </main>
+
+
+  </div>
+
+
+
+</body>
+

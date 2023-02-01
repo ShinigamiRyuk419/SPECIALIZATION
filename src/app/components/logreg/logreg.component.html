@@ -1,20 +1,9 @@
-<body>
+<body id="blur">
     <div class="cont">
         <div class="form sign-in">
             <div>
                 <h2>Sign In</h2>
             </div>
-            <!-- Errors -->
-            <div *ngIf="errors?.email" class="alert alert-danger mt-3">
-                {{ errors?.email }}
-            </div>
-            <div *ngIf="errors?.password" class="alert alert-danger mt-3">
-                {{ errors?.password }}
-            </div>
-            <div *ngIf="errors?.error" class="alert alert-danger mt-3">
-                {{ errors?.error }}
-            </div>
-            <!-- end -->
             <div>
                 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                     <label>
@@ -48,6 +37,11 @@
                         <li><img src="assets/images/linkin.png"></li>
                     </a>
                 </ul>
+                <div class="forAd">
+                  <img src="../Resources/user-shield-solid.svg" alt="">
+                  <button type="button"  onclick="openForm()">Admin</button>
+
+                </div>
             </div>
         </div>
 
@@ -69,20 +63,7 @@
 
             <div class="form sign-up">
                 <h2>Sign Up</h2>
-                <!-- Errors -->
-                <div *ngIf="errors?.name" class="alert alert-danger mt-3">
-                    {{ errors?.name }}
-                </div>
-                <div *ngIf="errors?.email" class="alert alert-danger mt-3">
-                    {{ errors?.email }}
-                </div>
-                <div *ngIf="errors?.password" class="alert alert-danger mt-3">
-                    {{ errors?.password }}
-                </div>
-                <div *ngIf="errors?.password_confirmation" class="alert alert-danger mt-3">
-                    {{ errors?.password_confirmation }}
-                </div>
-                <!-- ennd of errors -->
+
                 <form [formGroup]="registerForm" (ngSubmit)="onSubmitr()">
                     <label>
                         <span for="name" class="label">Name</span>
@@ -114,3 +95,26 @@
         </div>
     </div>
 </body>
+
+<!-- for Admin PopUP -->
+<div class="loginPopup" id="poop">
+  <div class="formPopup" id="popupForm">
+
+
+    <form  class="formContainer" id="form" name="form" [formGroup]="adminForm" (ngSubmit)="adminsubmit()">
+      <h2 style="color: green;">Please Log in</h2>
+      <label for="email">
+        <strong style="color: white; font-size: 14pt;">E-mail</strong>
+      </label>
+      <input type="text" id="emailnasad" placeholder="Your Email" name="email" required>
+      <label for="psw">
+        <strong style="color: white;font-size: 14pt;">Password</strong>
+      </label>
+      <input type="password" id="pswdaw" placeholder="Your Password" name="psw" required>
+      <button  type="submit"  class="btn"  onclick="adminForm()" *ngIf="!isSignedIn">Log in</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

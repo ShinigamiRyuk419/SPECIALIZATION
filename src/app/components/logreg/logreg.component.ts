@@ -9,6 +9,8 @@ import { AuthStateService } from '../../shared/auth-state.service';
 import { NgToastService } from "ng-angular-popup";
 
 declare var switchForm: any;
+declare var validation: any;
+
 
 @Component({
   selector: 'app-logreg',
@@ -17,8 +19,11 @@ declare var switchForm: any;
 })
 export class LogregComponent  implements OnInit {
 
+  isSignedIn!: boolean;
+
   registerForm: FormGroup;
   loginForm: FormGroup;
+  adminForm: FormGroup;
   errors: any = null;
 
   // constructor(private http:HttpClient){}
@@ -41,8 +46,18 @@ export class LogregComponent  implements OnInit {
       email: [],
       password: [],
     });
+
+    this.adminForm = this.fb.group({
+      email: ['admin@gmail.com'],
+      password: ['admin'],
+    });
   }
 
+adminsubmit(){
+  new validation();
+  // this.errors = error.error;
+  this.router.navigate(['/admindashboard']);
+}
 
   onSubmitr() {
     this.authService.register(this.registerForm.value).subscribe(
@@ -83,6 +98,7 @@ export class LogregComponent  implements OnInit {
 
   ngOnInit(): void {
     new switchForm();
+
   }
 
   // for login

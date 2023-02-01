@@ -13,6 +13,9 @@ import { AddproductComponent } from './ForSupplier/addproduct/addproduct.compone
 import { RequestsComponent } from './ForSupplier/requests/requests.component';
 import { LogregComponent } from './components/logreg/logreg.component';
 import { AdmindashboardComponent } from './admin/admindashboard/admindashboard.component';
+import { OrdersComponent } from './admin/orders/orders.component';
+import { PostproductComponent } from './admin/postproduct/postproduct.component';
+import { SupplierrequestComponent } from './admin/supplierrequest/supplierrequest.component';
 
 
 
@@ -30,6 +33,9 @@ const routes: Routes = [
   {path:'requests',component: RequestsComponent},
   {path:'logreg',component: LogregComponent},
   {path:'admindashboard',component: AdmindashboardComponent},
+  {path:'orders',component: OrdersComponent},
+  {path:'postproduct',component: PostproductComponent},
+  {path:'supplierrequest',component: SupplierrequestComponent}
 
 ]
 

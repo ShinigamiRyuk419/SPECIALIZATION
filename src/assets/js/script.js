@@ -3,6 +3,10 @@
 let slideIndex = 0;
 showSlides();
 
+// validation();
+// closeForm();
+// openForm();
+
 switchForm();
 
 showPreview(event);
@@ -44,3 +48,34 @@ function showPreview(event){
       preview.style.display = "block";
     }
 }
+
+
+//for admin login
+function openForm() {
+  var blur = document.getElementById('blur');
+  blur.classList.toggle('active')
+  document.getElementById("popupForm").style.display = "block";
+}
+function closeForm() {
+  document.getElementById("popupForm").style.display = "none";
+  var blur = document.getElementById('blur');
+  blur.classList.toggle('active')
+}
+
+function validation() {
+        var email = 'admin@gmail.com'
+        var password ='admin'
+
+        var eMail = document.getElementById('emailnasad').value;
+        var passWord = document.getElementById('pswdaw').value;
+
+        if ((email == eMail) && (password == passWord)) {
+          alert("\n Welcome Admin")
+          document.getElementById('form').setAttribute("action", "admindashboard.component.html");
+
+        }
+        else {
+            alert("\nWrong Entry!")
+            // document.getElementsByClassName('formContainer').setAttribute('class','form');
+        }
+    }

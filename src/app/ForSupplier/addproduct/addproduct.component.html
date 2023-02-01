@@ -1,62 +1,60 @@
 <div class="con">
-    <div class="form-style-3">
-        <form class="form1">
-                <fieldset>
-                    <legend>Supplier's Information</legend>
-                    <label for="field1"><span>Name <span class="required">*</span></span><input type="text"
-                            class="input-field" name="field1" value="" /></label>
-                    <label for="field2"><span>Email <span class="required">*</span></span><input type="email"
-                            class="input-field" name="field2" value="" /></label>
-                    <label for="field3"><span>Phone <span class="required">*</span></span><input type="text"
-                            class="input-field" name="field3" value="" /></label>
-                    <label for="field3"><span>Address <span class="required">*</span></span><input type="text"
-                            class="input-field" name="field3" value="" /></label>
-                    <!-- <label for="field4"><span>Address</span><select name="field4" class="select-field">
+  <div class="form-style-3">
+    <form action="" >
+      <div class="form1" >
+        <fieldset>
+          <legend>Supplier's Information</legend>
+          <label for="field1"><span>Name <span class="required">*</span></span><input [(ngModel)]="s_name" [ngModelOptions]="{standalone: true}" type="text" class="input-field"
+              name="field1" value="" /></label>
+          <label for="field2"><span>Email <span class="required">*</span></span><input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" type="email" class="input-field"
+              name="field2" value="" /></label>
+          <label for="field3"><span>Phone <span class="required">*</span></span><input [(ngModel)]="phone" [ngModelOptions]="{standalone: true}"  type="text" class="input-field"
+              name="field3" value="" /></label>
+          <label for="field3"><span>Address <span class="required">*</span></span><input [(ngModel)]="address" [ngModelOptions]="{standalone: true}"  type="text" class="input-field"
+              name="field3" value="" /></label>
+          <!-- <label for="field4"><span>Address</span><select name="field4" class="select-field">
             <option value="Appointment">Appointment</option>
             <option value="Interview">Interview</option>
             <option value="Regarding a post">Regarding a post</option>
             </select></label> -->
-                </fieldset>
+        </fieldset>
 
-                
-                
-            
-            
-        </form>
-        <form class="form2">
-            <fieldset>
-                <legend>Product Information</legend>
-                <label for="field1"><span>Product Name <span class="required">*</span></span><input type="text"
-                        class="input-field" name="field1" value="" /></label>
-                <label for="field2"><span>Quantity <span class="required">*</span></span><input type="email"
-                        class="input-field" name="field2" value="" /></label>
-                <label for="field3"><span>Price <span class="required">*</span></span><input type="text"
-                        class="input-field" name="field3" value="" /></label>
-                <label for="field4"><span>Category</span><select name="field4" class="select-field">
-                        <option value="Appointment">Fruit</option>
-                        <option value="Interview">Vegetable</option>
-                        <option value="Regarding a post">Flower</option>
-                    </select></label>
-                <label for="field3"><span>Date Available <span class="required">*</span></span><input type="date"
-                        class="input-field" name="field3" value="" /></label>
-                <label><span> </span><input type="submit" value="Submit" /></label>
-            </fieldset>
-        </form>
-        <div class="form3">
-            <div class="im" >
-                <div class="center">
-                    <div class="form-input">
-                      <div class="preview">
-                        <img id="file-ip-1-preview">
-                      </div>
-                      <label for="file-ip-1">Upload Image</label>
-                      <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
-                      
-                    </div>
-                  </div>
+      </div>
+      <div class="form2">
+        <fieldset>
+          <legend>Product Information</legend>
+          <label for="field1"><span>Product Name <span class="required">*</span></span><input [(ngModel)]="productname" [ngModelOptions]="{standalone: true}"  type="text"
+              class="input-field" name="field1" value="" /></label>
+          <label for="field2"><span>Quantity <span class="required">*</span></span><input [(ngModel)]="quantity" [ngModelOptions]="{standalone: true}"  type="number"
+              class="input-field" name="field2" value="" /></label>
+          <label for="field3"><span>Price <span class="required">*</span></span><input [(ngModel)]="price" [ngModelOptions]="{standalone: true}"  type="number" class="input-field"
+              name="field3" value="" /></label>
+          <label for="field4"><span>Category</span><select name="field4" class="select-field" [(ngModel)]="category" [ngModelOptions]="{standalone: true}" >
+              <option value="Appointment">Fruit</option>
+              <option value="Interview">Vegetable</option>
+              <option value="Regarding a post">Flower</option>
+            </select></label>
+          <label for="field3"><span>Date Available <span class="required">*</span></span><input  [(ngModel)]="availability" [ngModelOptions]="{standalone: true}" type="date"
+              class="input-field" name="field3" value="" /></label>
+          <label><span> </span><input (click)="save()" type="submit" value="Submit" /></label>
+        </fieldset>
+      </div>
+      <div class="form3">
+        <div class="im">
+          <div class="center">
+            <div class="form-input">
+              <div class="preview">
+                <img id="file-ip-1-preview" >
+              </div>
+              <label for="file-ip-1">Upload Image</label>
+              <input [(ngModel)]="image" [ngModelOptions]="{standalone: true}"  type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+
             </div>
+          </div>
         </div>
-    </div>
+      </div>
+    </form>
+  </div>
 </div>
 
 <app-products1 style="margin: auto;position: relative;"></app-products1>
