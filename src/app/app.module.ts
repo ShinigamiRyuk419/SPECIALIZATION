@@ -27,7 +27,10 @@ import { ReactiveFormsModule} from '@angular/forms';
 import { AdmindashboardComponent } from './admin/admindashboard/admindashboard.component';
 import { SupplierrequestComponent } from './admin/supplierrequest/supplierrequest.component';
 import { OrdersComponent } from './admin/orders/orders.component';
-import { PostproductComponent } from './admin/postproduct/postproduct.component';
+import { LoginsComponent } from './ForSupplier/logins/logins.component';
+import { BuyerComponent } from './components/buyer/buyer.component';
+import { Cart1Component } from './ForSupplier/cart1/cart1.component';
+
 
 
 
@@ -55,7 +58,9 @@ import { PostproductComponent } from './admin/postproduct/postproduct.component'
     AdmindashboardComponent,
     SupplierrequestComponent,
     OrdersComponent,
-    PostproductComponent,
+    LoginsComponent,
+    BuyerComponent,
+    Cart1Component,
 
   ],
   imports: [

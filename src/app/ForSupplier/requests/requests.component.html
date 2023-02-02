@@ -20,7 +20,7 @@
                             </tr>
     
                         </thead>
-                        <tbody *ngFor="let req of requestlist; let i = index">
+                        <tbody *ngFor="let req of ProductArray; let i = index">
                             <!-- *ngFor="let item of products; let i = index" -->
                             <tr>
                                 <!-- <td>{{i+1}}</td>
@@ -37,12 +37,12 @@
                                 <td><img style="width: 20px;"
                                         src="{{req.image}}"
                                         alt=""> </td>
-                                <td>{{req.name}}</td>
+                                <td>{{req.productname}}</td>
                                 <td>{{req.availability}}</td>
-                                <td>{{req.quantity}}</td>
-                                <td>{{req.price}}</td>
+                                <td>{{req.quantity}} klg</td>
+                                <td>{{req.price}} per klg</td>
                                 <td>{{req.status}}</td>
-                                <td><button class="btn btn-danger" ><i class="fas fa-trash"></i></button></td>
+                                <td><button class="btn btn-danger" (click)="setDelete(req)"><i class="fa fa-trash">remove</i></button></td>
                             </tr>
     
     

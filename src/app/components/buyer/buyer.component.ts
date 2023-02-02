@@ -1,15 +1,14 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NgToastService } from 'ng-angular-popup';
 import { CartService } from 'src/app/api/cart.service';
-import { NgToastService } from "ng-angular-popup";
 import { ProductsService } from 'src/app/api/products.service';
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  selector: 'app-buyer',
+  templateUrl: './buyer.component.html',
+  styleUrls: ['./buyer.component.css']
 })
-export class CartComponent  implements OnInit{
-  
+export class BuyerComponent implements OnInit {
   public products!:any[];
   public grandtotal:number =0;
     

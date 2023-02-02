@@ -35,7 +35,7 @@ export class SupplierrequestComponent implements OnInit {
     this.getAllpost();
   };
 
-  getAllproducts()
+  getAllproducts() // for posts
   {
 
     this.http.get("http://localhost:3000/posts").subscribe((resultData: any)=>
@@ -46,11 +46,11 @@ export class SupplierrequestComponent implements OnInit {
     });
   };
 
-  // for posts
-  getAllpost()
+ 
+  getAllpost()//to show in the table request
   {
 
-    this.http.get("http://127.0.0.1:8000/api/posts").subscribe((resultData: any)=>
+    this.http.get("http://localhost:3000/request?status=requested").subscribe((resultData: any)=>
     {
         this.isResultLoaded = true;
         console.log(resultData);
@@ -62,10 +62,10 @@ export class SupplierrequestComponent implements OnInit {
   {
 
     let bodyData = {
-      "s_name" : this.s_name,
-      "email" : this.email,
-      "phone" : this.phone,
-      "address" : this.address,
+      // "s_name" : this.s_name,
+      // "email" : this.email,
+      // "phone" : this.phone,
+      // "address" : this.address,
       "productname" : this.productname,
       "image" : this.image,
       "quantity" : this.quantity,
@@ -81,10 +81,10 @@ export class SupplierrequestComponent implements OnInit {
         console.log(resultData);
         alert("Product Added Successfully")
         this.getAllproducts();
-        this.s_name= '';
-        this.email= '';
-        this.phone= '';
-        this.address = '';
+        // this.s_name= '';
+        // this.email= '';
+        // this.phone= '';
+        // this.address = '';
         this.productname= '';
         this.image= '';
         this.quantity  = 0;
@@ -94,12 +94,7 @@ export class SupplierrequestComponent implements OnInit {
         this.status =""
     });
   }
-  savePost()
-  {
-    if(this.currentProductID == '')
 
-       this.register();
-      }
 
 
   // to update product request
@@ -135,11 +130,11 @@ export class SupplierrequestComponent implements OnInit {
       "status" : this.status
     };
 
-    this.http.put("http://127.0.0.1:8000/api/update"+ "/"+ this.currentProductID,bodyData).subscribe((resultData: any)=>
+    this.http.put("http://localhost:3000/request"+ "/"+ this.currentProductID,bodyData).subscribe((resultData: any)=>
     {
         console.log(resultData);
         alert("Product Updated")
-        this.getAllproducts();
+        this.getAllpost();
         this.s_name= '';
         this.email= '';
         this.phone= '';
@@ -157,7 +152,14 @@ export class SupplierrequestComponent implements OnInit {
   save()
   {
     if(this.currentProductID == '')
-
+    {
+        this.register();
+    }
+      else
+      {
+        this.register();
        this.UpdateRecords();
       }
+
+  };
 }

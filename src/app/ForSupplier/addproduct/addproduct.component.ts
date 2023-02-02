@@ -24,7 +24,6 @@ export class AddproductComponent implements OnInit {
   availability: string = "";
   category: string = "";
   status:string = "";
-
   currentProductID = "";
 
   constructor(private http: HttpClient )
@@ -40,7 +39,7 @@ export class AddproductComponent implements OnInit {
   getAllproducts()
   {
 
-    this.http.get("http://localhost:3000/posts").subscribe((resultData: any)=>
+    this.http.get("http://localhost:3000/request").subscribe((resultData: any)=>
     {
         this.isResultLoaded = true;
         console.log(resultData);
@@ -68,17 +67,17 @@ export class AddproductComponent implements OnInit {
 
     };
 
-    this.http.post("http://localhost:3000/posts",bodyData).subscribe((resultData: any)=>
+    this.http.post("http://localhost:3000/request",bodyData).subscribe((resultData: any)=>
     {
         console.log(resultData);
-        alert("Product Added Successfully")
+        alert("Request Submitted")
         this.getAllproducts();
         this.s_name= '';
         this.email= '';
         this.phone= '';
         this.address = '';
         this.productname= '';
-        this.image= '';
+        this.image= 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXXtpmpJdmkRsT-msQ524qCCTog_eHYB_2Kz31m6-kZffWhA5wpqpVgGa04HbzFIEcUWw&usqp=CAU';
         this.quantity  = 0;
         this.price = 0;
         this.availability = '';

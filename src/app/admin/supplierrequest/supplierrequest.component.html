@@ -25,11 +25,11 @@
             <span class="las la-shopping-bag"></span>
             <span>Orders</span></a>
         </li>
-        <li>
+        <!-- <li>
           <a routerLink="/postsupplies">
             <span class="las la-users"></span>
             <span>Post New Product</span></a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
@@ -59,7 +59,7 @@
       </div> -->
     </header>
 
-    <main >
+    <main class="1">
       <div class="recent-grid">
         <div class="projects">
           <div class="card">
@@ -74,6 +74,9 @@
                 <thead>
                   <tr class="inform">
                     <td>Products</td>
+                    <td>Supplier's name</td>
+                    <td>Address</td>
+                    <td>Email</td>
                     <td>Date Available</td>
                     <td>Quantity</td>
                     <td>Price</td>
@@ -81,8 +84,11 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="information" *ngFor="let reqItem of ProductArray" (click)="setUpdate(reqItem)">
+                  <tr class="information" *ngFor="let reqItem of ProductArray" >
                     <td>{{reqItem.productname}}</td>
+                    <td>{{reqItem.s_name}}</td>
+                    <td>{{reqItem.address}}</td>
+                    <td>{{reqItem.email}}</td>
                     <td>{{reqItem.availability}}</td>
                     <td><b>{{reqItem.quantity}}</b> klg</td>
                     <td><b>{{reqItem.price}}</b> /klg</td>
@@ -100,17 +106,84 @@
             </div>
 
           </div>
-
         </div>
-
-
       </div>
+<!-- ambot   -->
+      <div class="recent-grid">
+        <div class="projects">
+          <div class="card">
+            <div class="card-header">
+              <!-- <div class="picture">
+                <img src="assets/images/c1.jpg" alt="" width="250" height="250"
+                  style="margin-top: 30px;margin-left: 2rem;">
+                <br>
+                <form>
+                  <input class="upload" name="profile_image" type="file" required style="margin-left: 9rem;">
+                </form>
+              </div> -->
 
+              <!-- <div class="list">
+                <p for="fname"><b>Products</b></p><br>
+                <input class="textfield" type="text" id="fname" name="fname" value=""><br><br>
+                <p for="lname"><b>Delivery Address</b></p><br>
+                <input class="textfield" type="text" id="address" name="address" value=""><br><br>
+                <p for="lname"><b>Available Date</b></p><br>
+                <input class="textfield" type="text" id="lname" name="lname" value=""><br><br>
+                <p for="price"><b>Price </b></p><br>
+                <input class="textfield" type="text" id="price" name="price" value=""><br><br>
+                <p for="quantity"><b>Quantity</b></p><br>
+                <input class="textfield" type="text" id="quantity" name="quantity" value=""><br><br>
+                <input class="post" type="submit" value="Post">
+              </div> -->
+              <div class="form-style-3 ">
+                <fieldset>
+                  <legend>Product Information</legend>
+                  <label for="field1"><span>Product Name <span class="required">*</span></span><input [(ngModel)]="productname" [ngModelOptions]="{standalone: true}"  type="text"
+                      class="input-field" name="field1" value="" /></label>
+                  <label for="field2"><span>Quantity <span class="required">*</span></span><input [(ngModel)]="quantity" [ngModelOptions]="{standalone: true}"  type="number"
+                      class="input-field" name="field2" value="" /></label>
+                  <label for="field3"><span>Price <span class="required">*</span></span><input [(ngModel)]="price" [ngModelOptions]="{standalone: true}"  type="number" class="input-field"
+                      name="field3" value="" /></label>
+                  <label for="field4"><span>Category</span><select name="field4" class="select-field" [(ngModel)]="category" [ngModelOptions]="{standalone: true}" >
+                      <option value="Fruit">Fruit</option>
+                      <option value="Vegetable">Vegetable</option>
+                      <option value="Flower">Flower</option>
+                    </select></label>
+                  <label for="field3"><span>Delivery date <span class="required">*</span></span><input  [(ngModel)]="availability" [ngModelOptions]="{standalone: true}" type="date"
+                      class="input-field" name="field3" value="" /></label>
+                 
+                  <label for="field4"><span>Status</span><select name="field4" class="select-field" [(ngModel)]="status" [ngModelOptions]="{standalone: true}" >
+                    <option value="Confirmed">Confirmed</option>
+                    <option value="Decline">Decline</option>
+                  </select></label>
+                  <label><span > <input  (click)="save()" type="submit" value="POST" /></span></label>
+                </fieldset>
+              </div>
 
+              <!-- <div class="form3">
+                <div class="im">
+                  <div class="center">
+                    <div class="form-input">
+                      <div class="preview">
+                        <img id="file-ip-1-preview" >
+                      </div>
+                      <label for="file-ip-1">Upload Image</label>
+                      <input [(ngModel)]="image" [ngModelOptions]="{standalone: true}"  type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+        
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              
 
+            </div>
+          </div>
+        </div>
+      </div>
 
     </main>
 
+  
 
   </div>
 

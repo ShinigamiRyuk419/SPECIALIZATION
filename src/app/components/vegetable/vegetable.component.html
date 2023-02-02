@@ -1,14 +1,15 @@
-<div style="margin-top: 250px;">
+<div style="margin-top: 50px;">
     <div class="container">
         <div class="row">
     <ng-container *ngFor="let item of productlist">
             <div class="card col-md-3">
                 
-                    <img src="{{item.image}}" alt="">
-                    <h5 >{{item.title}}</h5>
-                    <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
-                    <p><strong>Amount: </strong> P {{item.price}}</p>
-                    <button class="btn btn-dark" (click)="addtocart(item)">Add to Basket</button>
+                <h5 >{{item.productname}}</h5>
+                <img src="{{item.image}}" alt="">
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;"><b>Delivery date:  </b> {{item.availability}}</p>
+                <!-- <p><strong>Quantity: </strong> {{item.quantity}} klg</p> -->
+                <p><strong>Price: </strong> P {{item.price}} /klg</p>
+                <button class="btn btn-dark" (click)="addtocart(item)">Add to Basket</button>
               
             </div>
         </ng-container> 
@@ -17,3 +18,4 @@
     </div>
     
 </div>
+<app-footer></app-footer>

@@ -25,11 +25,11 @@
             <span class="las la-shopping-bag"></span>
             <span>Orders</span></a>
         </li>
-        <li>
+        <!-- <li>
           <a routerLink="/postproduct">
             <span class="las la-users"></span>
             <span>Post New Product</span></a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
@@ -125,55 +125,14 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="information">
-                    <td>Apple</td>
-                    <td>02/04/23</td>
-                    <td>200 pcs</td>
-                    <td>P15 per pc</td>
-                    <td><button class="first">Confirm</button> <button class="second">Decline</button></td>
-                  </tr>
-                  <tr class="information">
-                    <td>Grapes</td>
-                    <td>02/11/23</td>
-                    <td>80 Kilos</td>
-                    <td>P250 per kilo</td>
-                    <td><button class="first">Confirm</button> <button class="second">Decline</button></td>
-                  </tr>
-                  <tr class="information">
-                    <td>Orange</td>
-                    <td>02/18/23</td>
-                    <td>150 pcs</td>
-                    <td>P10 per pcs</td>
-                    <td><button class="first">Confirm</button> <button class="second">Decline</button></td>
-                  </tr>
-                  <tr class="information">
-                    <td>Cabbage</td>
-                    <td>02/24/23</td>
-                    <td>100 Kilos</td>
-                    <td>80 per kilo</td>
-                    <td><button class="first">Confirm</button> <button class="second">Decline</button></td>
-                  </tr>
-                  <tr class="information">
-                    <td>Carrots</td>
-                    <td>02/28/23</td>
-                    <td>50 Kilos</td>
-                    <td>120 per kilo</td>
-                    <td><button class="first">Confirm</button> <button class="second">Decline</button></td>
-                  </tr>
-                  <tr class="information">
-                    <td>Cucumber</td>
-                    <td>03/02/23</td>
-                    <td>40 Kilos</td>
-                    <td>P85 per kilo</td>
-                    <td><button class="first">Confirm</button> <button class="second">Decline</button></td>
-                  </tr>
-                  <tr class="information">
-                    <td>Avocados</td>
-                    <td>03/02/23</td>
-                    <td>150 pcs</td>
-                    <td>25 per pcs</td>
-                    <td><button class="first">Confirm</button> <button class="second">Decline</button></td>
-                  </tr>
+                    <tr class="information" *ngFor="let reqItem of ProductArray" >
+                      <td>{{reqItem.productname}}</td>
+                      <td>{{reqItem.availability}}</td>
+                      <td><b>{{reqItem.quantity}}</b> klg</td>
+                      <td><b>{{reqItem.price}}</b> /klg</td>
+                      <td>{{reqItem.status}}</td>
+                      <td><button class="first" routerLink="/supplierrequest" >Confirm</button> <button class="second">Decline</button></td>
+                    </tr>
 
                 </tbody>
 

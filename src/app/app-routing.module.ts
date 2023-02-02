@@ -14,14 +14,17 @@ import { RequestsComponent } from './ForSupplier/requests/requests.component';
 import { LogregComponent } from './components/logreg/logreg.component';
 import { AdmindashboardComponent } from './admin/admindashboard/admindashboard.component';
 import { OrdersComponent } from './admin/orders/orders.component';
-import { PostproductComponent } from './admin/postproduct/postproduct.component';
 import { SupplierrequestComponent } from './admin/supplierrequest/supplierrequest.component';
+import { Products1Component } from './components/products1/products1.component';
+import { LoginsComponent } from './ForSupplier/logins/logins.component';
+import { BuyerComponent } from './components/buyer/buyer.component';
 
 
 
 const routes: Routes = [
   {path:'', redirectTo:'products',pathMatch:'full'},
   {path:'products', component:ProductsComponent},
+  {path:'products1', component:Products1Component},
   {path:'cart',component: CartComponent},
   {path:'about',component: AboutComponent},
   {path:'fruit',component: FruitComponent},
@@ -34,8 +37,10 @@ const routes: Routes = [
   {path:'logreg',component: LogregComponent},
   {path:'admindashboard',component: AdmindashboardComponent},
   {path:'orders',component: OrdersComponent},
-  {path:'postproduct',component: PostproductComponent},
-  {path:'supplierrequest',component: SupplierrequestComponent}
+  {path:'supplierrequest',component: SupplierrequestComponent},
+  {path:'logins',component: LoginsComponent},
+  {path:'buyer',component: BuyerComponent}
+
 
 ]
 

@@ -11,14 +11,12 @@ import { NgToastService } from "ng-angular-popup";
 declare var switchForm: any;
 declare var validation: any;
 
-
 @Component({
-  selector: 'app-logreg',
-  templateUrl: './logreg.component.html',
-  styleUrls: ['./logreg.component.css']
+  selector: 'app-logins',
+  templateUrl: './logins.component.html',
+  styleUrls: ['./logins.component.css']
 })
-export class LogregComponent  implements OnInit {
-
+export class LoginsComponent implements OnInit {
   isSignedIn!: boolean;
 
   registerForm: FormGroup;
@@ -89,7 +87,7 @@ adminsubmit(){
       () => {
         this.authState.setAuthState(true);
         this.loginForm.reset();
-        this.router.navigate(['/addproduct']);
+        this.router.navigate(['/buyer']);
       }
     );
   }
@@ -106,5 +104,6 @@ adminsubmit(){
   responseHandler(data:any) {
     this.token.handleData(data.access_token);
   }
+
 
 }
